@@ -29,13 +29,13 @@ int main(void)
             printf("Quantos quilos o seu estoque de carne Bovina tinha ?\n");
             scanf("%f", &estoque);// Prompt aonde o usuario final vai setar o valor do estoque
             printf("Quantos quilos de carne Bovina voce vendeu ?\n");//
-            scanf("%f", &quilos);// prompt que aonde o usuario final seta o valor valor vendido de carne bovina
+            scanf("%f", &quilos);// prompt que aonde o usuario final seta o valor  vendido de carne bovina
 
                 if (quilos > estoque)//se inserir mais quilos que o disponivel no estoque o sistema se encerra, caso esteja tudo certo o programa continua
                 {
                     printf("\n");
                     printf("Operacao invalida! Valor maior que o estoque! Reinicie o sitema!\n");
-                    return 0;
+                    system ("PAUSE");
                 }
 
             printf("Qual foi o valor de custo do quilo do seu produto ?\n");//Mensagem de solicitacao para o prompt
@@ -63,7 +63,7 @@ int main(void)
                 {
                     printf("\n");
                     printf("Operacao invalida! Valor maior que o estoque! Reinicie o sitema!\n");
-                    return 0;
+                    system("PAUSE");
                 }
 
             printf("Qual foi o valor de custo do quilo do seu produto ?\n");
@@ -92,7 +92,7 @@ int main(void)
                 {
                     printf("\n");
                     printf("Operacao invalida! Valor maior que o estoque! Reinicie o sitema!\n");
-                    return 0;
+                    system("PAUSE");
                 }
 
             printf("Qual foi o valor de custo do quilo do seu produto ?\n");
@@ -112,11 +112,11 @@ int main(void)
             printf("\n");
 
             valorCusto = (custoProduto * quilos);// realiza a multiplicacao para chegar no valor de custo totals
-            valorVenda = (vendaProduto * quilos);  //  realiza a multiplicacao para chegar no valor de valor de venda
-            imposto = (valorVenda / 100) * taxa;// traz o resultado do valor da taxa 
+            valorVenda = (vendaProduto * quilos);  //  realiza a multiplicacao para chegar no valor de venda
+            imposto = (valorVenda / 100) * taxa;// traS o resultado do valor da taxa 
             valorLiquido = (valorVenda - imposto);// mostra o valor valor de venda - o imposto colocado
-            lucro = (valorLiquido - valorCusto);//traz o lucro obtido 
-            estoqueAtual = (estoque - quilos);// traz o valor atual do estoque
+            lucro = (valorLiquido - valorCusto);//tras o lucro obtido 
+            estoqueAtual = (estoque - quilos);// tras o valor atual do estoque
 
             printf("Seu imposto e de %2.2f%%\n", taxa);//imprime a variavel taxa
             printf("Seu valor de custo foi R$%2.2f\n", valorCusto);// imprime o valor de custo
@@ -126,7 +126,7 @@ int main(void)
             printf("Seu lucro e de R$%2.2f\n", lucro);// lucroo obtido pelo empreendedor
             printf("Seu estoque era de %2.2fKG\n", estoque);// faz a conta e tras o estoque atual
             printf("Voce retirou do seu estoque %2.2fKG\n", quilos);// valor removido do estoque
-            printf("Seu estoque atual e: %2.2fKG\n", estoqueAtual);// Traz a quantidade de produto atual
+            printf("Seu estoque atual e: %2.2fKG\n", estoqueAtual);// Tras a quantidade de produto atual
             printf("\n");
      if (tipoCarne < 1 || tipoCarne > 3) // caso o valor selecionado for inexistente ele encerra a consulta
     {
@@ -140,4 +140,3 @@ int main(void)
 
     system("PAUSE");
 }
-
